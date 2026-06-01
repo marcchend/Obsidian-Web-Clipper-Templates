@@ -1,0 +1,63 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Recipes",
+	"behavior": "create",
+	"noteContentFormat": "{{description}}\n\n## Temps\n\n| | |\n|---|---|\n| Préparation | {{schema:prepTime|duration}} |\n| Repos | {{schema:restTime|duration}} |\n| Cuisson | {{schema:cookTime|duration}} |\n| Total | {{schema:totalTime|duration}} |\n\n## Ingrédients\n\n> Pour {{schema:recipeYield}} personnes\n\n{{schema:recipeIngredient|list:task}}\n\n## Instructions\n\n{{schema:recipeInstructions[*].text|list:task}}\n\n## Nutrition\n\n{{schema:@Recipe:nutrition|uncamel|capitalize|table|replace:(\"@type\":\"Nutrient\",\"Nutrition information\":\"Quantity\")}}",
+	"properties": [
+		{
+			"name": "tags",
+			"value": "clippings",
+			"type": "multitext"
+		},
+		{
+			"name": "categories",
+			"value": "[[Recipes]]",
+			"type": "multitext"
+		},
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "author",
+			"value": "[[{{author}}]]",
+			"type": "multitext"
+		},
+		{
+			"name": "published",
+			"value": "{{published}}",
+			"type": "date"
+		},
+		{
+			"name": "rating",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "base",
+			"value": "[[Clippings.base#Recipes]]",
+			"type": "text"
+		},
+		{
+			"name": "image",
+			"value": "{{image}}",
+			"type": "text"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "status",
+			"value": "",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"schema:@Recipe"
+	],
+	"noteNameFormat": "{{time|date:YYYY-MM-DD-HHmmss}} {{title}}",
+	"path": "Clippings"
+}

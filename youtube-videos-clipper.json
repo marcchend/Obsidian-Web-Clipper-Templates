@@ -1,0 +1,73 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "YouTube Videos",
+	"behavior": "create",
+	"noteContentFormat": "\n![{{title}}]({{schema:@VideoObject:embedUrl|replace:\"embed/\":\"watch?v=\"}})\n\n{{transcript|replace:\"**\":\"\n**\"|callout:\"quote\",\"Transcript\",true}}\n\n---\n## Notes\n\n",
+	"properties": [
+		{
+			"name": "tags",
+			"value": "clippings",
+			"type": "multitext"
+		},
+		{
+			"name": "categories",
+			"value": "[[Clippings]]",
+			"type": "multitext"
+		},
+		{
+			"name": "title",
+			"value": "{{schema:@VideoObject:name}}",
+			"type": "text"
+		},
+		{
+			"name": "author",
+			"value": "[[{{schema:@VideoObject:author}}]]",
+			"type": "multitext"
+		},
+		{
+			"name": "published",
+			"value": "{{schema:@VideoObject:uploadDate|date:\\\"YYYY-MM-DD\\\"}}",
+			"type": "date"
+		},
+		{
+			"name": "duration",
+			"value": "{{schema:@VideoObject:duration|replace:\\\"PT\\\":\\\"\\\":\\\"S\\\",\\\"\\\"|duration}}",
+			"type": "text"
+		},
+		{
+			"name": "topics",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "base",
+			"value": "[[Clippings.base#YouTube Videos]]",
+			"type": "text"
+		},
+		{
+			"name": "image",
+			"value": "{{schema:thumbnailUrl|slice:0}}",
+			"type": "text"
+		},
+		{
+			"name": "url",
+			"value": "{{schema:@VideoObject:embedUrl|replace:\\\"embed/\\\":\\\"watch?v=\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "timestamps",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "status",
+			"value": "",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://www.youtube.com/watch"
+	],
+	"noteNameFormat": "{{time|date:YYYY-MM-DD-HHmmss}} {{title}}",
+	"path": "Clippings"
+}

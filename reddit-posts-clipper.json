@@ -1,0 +1,68 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Reddit Posts",
+	"behavior": "create",
+	"noteContentFormat": "## Post\n{{selectorHtml:shreddit-post > div[class=\"text-neutral-content\"]|markdown|trim}}\n{{content|replace:\"## Comments\":\"### Comments\"|replace:\"---\\n\\n\":\"---\\n\"|trim}}\n\n---\n## Notes\n\n",
+	"properties": [
+		{
+			"name": "tags",
+			"value": "clippings",
+			"type": "multitext"
+		},
+		{
+			"name": "categories",
+			"value": "[[Clippings]]",
+			"type": "multitext"
+		},
+		{
+			"name": "title",
+			"value": "{{selector:shreddit-post?post-title|trim}}",
+			"type": "text"
+		},
+		{
+			"name": "author",
+			"value": "[[{{selector:shreddit-post?author}}]]",
+			"type": "multitext"
+		},
+		{
+			"name": "published",
+			"value": "{{selector:shreddit-post?created-timestamp|date:\\\"YYYY-MM-DDTHH:mm:ssZ\\\"}}",
+			"type": "date"
+		},
+		{
+			"name": "subreddit",
+			"value": "{{selector:shreddit-post?subreddit-prefixed-name}}",
+			"type": "text"
+		},
+		{
+			"name": "topics",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "base",
+			"value": "[[Clippings.base#Reddit Posts]]",
+			"type": "text"
+		},
+		{
+			"name": "image",
+			"value": "{{selector:img.post-background-image-filter?src|first}}",
+			"type": "text"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "status",
+			"value": "",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"/^https:\\/\\/www.reddit.com\\/r\\/\\w+\\/comments/"
+	],
+	"noteNameFormat": "{{time|date:YYYY-MM-DD-HHmmss}} {{selector:shreddit-post?post-title|trim}}",
+	"path": "Clippings"
+}

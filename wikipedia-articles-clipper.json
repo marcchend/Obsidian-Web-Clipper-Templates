@@ -1,0 +1,63 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Wikipedia Articles",
+	"behavior": "create",
+	"noteContentFormat": "\n![Image]({{image}})\n\n{{selectorHtml:.mw-parser-output > *\n  | join:\"\\n\\n\"\n  | remove_html:\".mw-editsection, .mw-empty-elt, .toc, .infobox, .navbox, .navbox-styles, style, .reflist, .references, .ambox, .ombox, .mbox-small, .stub, .hatnote, .metadata, .noprint, table, figure, .thumb, img, .mw-indicator, .shortdescription, .sidebar, .mw-subjectpageheader\"\n  | remove_tags:(\"a\", \"span\", \"sup\")\n  | markdown\n  | replace:(\"/\\\\\\\\?(\\\\[)/g\":\"[^\")\n  | replace:(\"/\\\\\\\\?(\\\\])/g\":\"]\")\n  | replace:(\"/\\\\\\\\/g\":\"\")\n  | replace:(\"/\\n[n ]+/g\":\"\\n\")\n  | trim}}\n\n## References\n{{selector:.reference-text | unique | map:item => \"${item} ↩︎\" | footnote}}",
+	"properties": [
+		{
+			"name": "tags",
+			"value": "clippings",
+			"type": "multitext"
+		},
+		{
+			"name": "categories",
+			"value": "[[Clippings]]",
+			"type": "multitext"
+		},
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "author",
+			"value": "[[Wikipedia]]",
+			"type": "multitext"
+		},
+		{
+			"name": "published",
+			"value": "{{published}}",
+			"type": "date"
+		},
+		{
+			"name": "topics",
+			"value": "[[{{selector:.firstHeading}}]]",
+			"type": "multitext"
+		},
+		{
+			"name": "base",
+			"value": "[[Clippings.base#Wikipedia Articles]]",
+			"type": "text"
+		},
+		{
+			"name": "image",
+			"value": "{{image}}",
+			"type": "text"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "status",
+			"value": "",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"/^https:\\/\\/[a-z-.]+\\.wikipedia\\.org\\/wiki\\/.*$/"
+	],
+	"noteNameFormat": "{{time|date:YYYY-MM-DD-HHmmss}} {{title}}",
+	"path": "Clippings"
+}

@@ -1,0 +1,73 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Google Maps",
+	"behavior": "create",
+	"noteContentFormat": "## Notes\n\n",
+	"properties": [
+		{
+			"name": "tags",
+			"value": "references",
+			"type": "multitext"
+		},
+		{
+			"name": "categories",
+			"value": "[[Places]]",
+			"type": "multitext"
+		},
+		{
+			"name": "type",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "coordinates",
+			"value": "{{url|split:\\\"/@\\\"|slice:1|split:\\\",\\\"|slice:0,2}}",
+			"type": "multitext"
+		},
+		{
+			"name": "loc",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "address",
+			"value": "{{selector:button[data-item-id=\\\"address\\\"] .Io6YTe}}",
+			"type": "text"
+		},
+		{
+			"name": "description",
+			"value": "{{selector:.PYvSYb}}",
+			"type": "text"
+		},
+		{
+			"name": "rating",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "base",
+			"value": "[[Places.base]]",
+			"type": "text"
+		},
+		{
+			"name": "image",
+			"value": "{{image}}",
+			"type": "text"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "status",
+			"value": "",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://www.google.com/maps/place/"
+	],
+	"noteNameFormat": "{{selector:h1.DUwDvf}}",
+	"path": "References"
+}

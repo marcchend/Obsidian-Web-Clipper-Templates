@@ -1,0 +1,58 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "AI Chats",
+	"behavior": "create",
+	"noteContentFormat": "\n{{\"rédige un résumé de 500 caractères maximum expliquant de quoi parle cette conversation et les principaux thèmes abordés, en français simple.\"|callout:\"summary\",\"Résumé\",false}}",
+	"properties": [
+		{
+			"name": "tags",
+			"value": "clippings",
+			"type": "multitext"
+		},
+		{
+			"name": "categories",
+			"value": "[[Clippings]]",
+			"type": "multitext"
+		},
+		{
+			"name": "topics",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "base",
+			"value": "[[Clippings.base#AI Chats]]",
+			"type": "text"
+		},
+		{
+			"name": "image",
+			"value": "{{image}}",
+			"type": "text"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "status",
+			"value": "",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"gemini.google.com",
+		"chat.openai.com",
+		"claude.ai",
+		"deepseek.com",
+		"perplexity.ai",
+		"chatgpt.com",
+		"https://chatgpt.com",
+		"https://gemini.google.com/",
+		"https://chat.deepseek.com",
+		"https://www.perplexity.ai",
+		"https://claude.ai/"
+	],
+	"noteNameFormat": "{{time|date:YYYY-MM-DD-HHmmss}} {{domain}}",
+	"path": "Clippings"
+}

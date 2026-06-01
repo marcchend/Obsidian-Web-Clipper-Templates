@@ -1,0 +1,61 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Défaut",
+	"behavior": "create",
+	"noteContentFormat": "## Notes\n\n",
+	"properties": [
+		{
+			"name": "tags",
+			"value": "clippings",
+			"type": "multitext"
+		},
+		{
+			"name": "categories",
+			"value": "[[Clippings]]",
+			"type": "multitext"
+		},
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "author",
+			"value": "[[{{author}}]]",
+			"type": "multitext"
+		},
+		{
+			"name": "published",
+			"value": "{{published}}",
+			"type": "date"
+		},
+		{
+			"name": "topics",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "base",
+			"value": "[[Clippings.base]]",
+			"type": "text"
+		},
+		{
+			"name": "image",
+			"value": "{{image}}",
+			"type": "text"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "status",
+			"value": "",
+			"type": "multitext"
+		}
+	],
+	"triggers": [],
+	"noteNameFormat": "{{time|date:YYYY-MM-DD-HHmmss}} {{title}}",
+	"path": "Clippings"
+}
