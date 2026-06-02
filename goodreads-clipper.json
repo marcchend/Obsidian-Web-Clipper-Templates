@@ -5,6 +5,11 @@
 	"noteContentFormat": "\n![BookCover]({{selector:.BookCover__image img?src|first}})\n\n{{selector:.BookPageMetadataSection__description|strip_tags|callout:\"info\",\"Description\",true}}\n\n---\n## Notes\n\n",
 	"properties": [
 		{
+			"name": "aliases",
+			"value": "",
+			"type": "text"
+		},
+		{
 			"name": "tags",
 			"value": "references",
 			"type": "multitext"

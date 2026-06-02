@@ -5,6 +5,11 @@
 	"noteContentFormat": "## Notes\n\n",
 	"properties": [
 		{
+			"name": "aliases",
+			"value": "",
+			"type": "text"
+		},
+		{
 			"name": "tags",
 			"value": "references",
 			"type": "multitext"
