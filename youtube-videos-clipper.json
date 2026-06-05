@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "YouTube Videos",
 	"behavior": "create",
-	"noteContentFormat": "\n![{{title}}]({{schema:@VideoObject:embedUrl|replace:\"embed/\":\"watch?v=\"}})\n\n{{transcript|replace:\"**\":\"\n**\"|callout:\"quote\",\"Transcript\",true}}\n\n---\n## Notes\n\n",
+	"noteContentFormat": "\n![]({{schema:@VideoObject:embedUrl|replace:\"embed/\":\"watch?v=\"}})\n\n{{transcript|replace:\"**\":\"\n**\"|callout:\"quote\",\"Transcript\",true}}\n\n---\n## Notes\n\n",
 	"properties": [
 		{
 			"name": "tags",
