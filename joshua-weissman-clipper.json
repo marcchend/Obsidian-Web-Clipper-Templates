@@ -1,0 +1,73 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Joshua Weissman",
+	"behavior": "create",
+	"noteContentFormat": "![{{title}}]({{schema:video.embedUrl}})\n\n{{description}}\n\n## Temps\n\n| | |\n|---|---|\n| Préparation | {{schema:prepTime|duration}} |\n| Cuisson | {{schema:cookTime|duration}} |\n| Total | {{schema:totalTime|duration}} |\n\n## Ingrédients\n\n> Pour {{schema:recipeYield}} personnes\n\n{{selectorHtml:.ingredients-list}}\n\n## Directions\n\n{{selectorHtml:.directions-list}}\n\n## Nutrition\n\n{{schema:@Recipe:nutrition|uncamel|capitalize|table|replace:(\"@type\":\"Nutrient\",\"Nutrition information\":\"Quantity\")}}",
+	"properties": [
+		{
+			"name": "aliases",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "clippings",
+			"type": "multitext"
+		},
+		{
+			"name": "categories",
+			"value": "[[Recipes]]",
+			"type": "multitext"
+		},
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "author",
+			"value": "[[Joshua Weissman]]",
+			"type": "multitext"
+		},
+		{
+			"name": "published",
+			"value": "{{schema:datePublished}}",
+			"type": "date"
+		},
+		{
+			"name": "rating",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "base",
+			"value": "[[Clippings.base#Recipes]]",
+			"type": "text"
+		},
+		{
+			"name": "image",
+			"value": "{{image}}",
+			"type": "text"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "video",
+			"value": "{{schema:video.embedUrl}}",
+			"type": "text"
+		},
+		{
+			"name": "status",
+			"value": "",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://www.joshuaweissman.com/recipes"
+	],
+	"noteNameFormat": "{{time|date:YYYY-MM-DD-HHmmss}} {{title}}",
+	"path": "Clippings"
+}
