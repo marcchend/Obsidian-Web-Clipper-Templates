@@ -1,0 +1,73 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "YouTube Videos (Summary) (Mobile)",
+	"behavior": "create",
+	"noteContentFormat": "\n{{\"rédige un résumé de 350 caractères maximum expliquant de quoi parle la vidéo et les principaux enseignements abordés, en français simple.\"|callout:\"summary\",\"Résumé\",false}}\n\n![]({{url}})\n\n---\n## Notes\n\n\n",
+	"properties": [
+		{
+			"name": "tags",
+			"value": "clippings",
+			"type": "multitext"
+		},
+		{
+			"name": "categories",
+			"value": "[[Clippings]]",
+			"type": "multitext"
+		},
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "author",
+			"value": "[[{{author}}]]",
+			"type": "multitext"
+		},
+		{
+			"name": "published",
+			"value": "{{published}}",
+			"type": "date"
+		},
+		{
+			"name": "duration",
+			"value": "{{schema:@VideoObject:duration|replace:\\\"PT\\\":\\\"\\\":\\\"S\\\",\\\"\\\"|duration}}",
+			"type": "text"
+		},
+		{
+			"name": "topics",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "base",
+			"value": "[[Clippings.base#YouTube Videos]]",
+			"type": "text"
+		},
+		{
+			"name": "image",
+			"value": "{{image}}",
+			"type": "text"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "timestamps",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "status",
+			"value": "",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://www.youtube.com/watch"
+	],
+	"noteNameFormat": "{{time|date:YYYY-MM-DD-HHmmss}} {{title}}",
+	"path": "Clippings"
+}
