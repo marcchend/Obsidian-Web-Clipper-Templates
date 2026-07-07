@@ -41,7 +41,7 @@
 		},
 		{
 			"name": "base",
-			"value": "[[Clippings.base]]",
+			"value": "[[Clippings.base#YouTube Videos]]",
 			"type": "text"
 		},
 		{
@@ -56,6 +56,11 @@
 		},
 		{
 			"name": "timestamps",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "status",
 			"value": "",
 			"type": "multitext"
 		}

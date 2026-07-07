@@ -58,6 +58,11 @@
 			"name": "video",
 			"value": "{{schema:video.embedUrl}}",
 			"type": "text"
+		},
+		{
+			"name": "status",
+			"value": "",
+			"type": "multitext"
 		}
 	],
 	"triggers": [

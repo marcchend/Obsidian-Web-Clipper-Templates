@@ -1,14 +1,9 @@
 {
 	"schemaVersion": "0.1.0",
-	"name": "Recipes",
+	"name": "Défaut",
 	"behavior": "create",
-	"noteContentFormat": "{{description}}\n\n## Temps\n\n| | |\n|---|---|\n| Préparation | {{schema:prepTime|duration}} |\n| Repos | {{schema:restTime|duration}} |\n| Cuisson | {{schema:cookTime|duration}} |\n| Total | {{schema:totalTime|duration}} |\n\n## Ingrédients\n\n> Pour {{schema:recipeYield}} personnes\n\n{{schema:recipeIngredient|list:task}}\n\n## Instructions\n\n{{schema:recipeInstructions[*].text|list:task}}\n\n## Nutrition\n\n{{schema:@Recipe:nutrition|uncamel|capitalize|table|replace:(\"@type\":\"Nutrient\",\"Nutrition information\":\"Quantity\")}}",
+	"noteContentFormat": "## Notes\n\n",
 	"properties": [
-		{
-			"name": "aliases",
-			"value": "",
-			"type": "text"
-		},
 		{
 			"name": "tags",
 			"value": "clippings",
@@ -16,7 +11,7 @@
 		},
 		{
 			"name": "categories",
-			"value": "[[Recipes]]",
+			"value": "[[Clippings]]",
 			"type": "multitext"
 		},
 		{
@@ -35,9 +30,9 @@
 			"type": "date"
 		},
 		{
-			"name": "rating",
+			"name": "topics",
 			"value": "",
-			"type": "text"
+			"type": "multitext"
 		},
 		{
 			"name": "base",
@@ -53,11 +48,14 @@
 			"name": "url",
 			"value": "{{url}}",
 			"type": "text"
+		},
+		{
+			"name": "status",
+			"value": "",
+			"type": "multitext"
 		}
 	],
-	"triggers": [
-		"schema:@Recipe"
-	],
+	"triggers": [],
 	"noteNameFormat": "{{time|date:YYYY-MM-DD-HHmmss}} {{title}}",
 	"path": "Clippings"
 }

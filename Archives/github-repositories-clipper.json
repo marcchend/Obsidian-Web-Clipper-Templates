@@ -1,6 +1,6 @@
 {
 	"schemaVersion": "0.1.0",
-	"name": "Défaut",
+	"name": "GitHub Repositories",
 	"behavior": "create",
 	"noteContentFormat": "## Notes\n\n",
 	"properties": [
@@ -16,17 +16,17 @@
 		},
 		{
 			"name": "title",
-			"value": "{{title}}",
+			"value": "{{selector:#repo-title-component a}}",
 			"type": "text"
 		},
 		{
 			"name": "author",
-			"value": "[[{{author}}]]",
+			"value": "[[{{meta:name:octolytics-dimension-user_login}}]]",
 			"type": "multitext"
 		},
 		{
 			"name": "published",
-			"value": "{{published}}",
+			"value": "{{selector:[data-testid=\\\\\"latest-commit-details\\\\\"] relative-time}}",
 			"type": "date"
 		},
 		{
@@ -36,7 +36,7 @@
 		},
 		{
 			"name": "base",
-			"value": "[[Clippings.base]]",
+			"value": "[[Clippings.base#GitHub Repositories]]",
 			"type": "text"
 		},
 		{
@@ -48,9 +48,16 @@
 			"name": "url",
 			"value": "{{url}}",
 			"type": "text"
+		},
+		{
+			"name": "status",
+			"value": "",
+			"type": "multitext"
 		}
 	],
-	"triggers": [],
+	"triggers": [
+		"/^https:\\/\\/github\\.com\\/[^\\/]+\\/[^\\/]+\\/?$/"
+	],
 	"noteNameFormat": "{{time|date:YYYY-MM-DD-HHmmss}} {{title}}",
 	"path": "Clippings"
 }

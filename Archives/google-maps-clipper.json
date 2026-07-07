@@ -63,6 +63,11 @@
 			"name": "url",
 			"value": "{{url}}",
 			"type": "text"
+		},
+		{
+			"name": "status",
+			"value": "",
+			"type": "multitext"
 		}
 	],
 	"triggers": [

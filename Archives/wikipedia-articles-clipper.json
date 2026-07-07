@@ -36,7 +36,7 @@
 		},
 		{
 			"name": "base",
-			"value": "[[Clippings.base]]",
+			"value": "[[Clippings.base#Wikipedia Articles]]",
 			"type": "text"
 		},
 		{
@@ -48,6 +48,11 @@
 			"name": "url",
 			"value": "{{url}}",
 			"type": "text"
+		},
+		{
+			"name": "status",
+			"value": "",
+			"type": "multitext"
 		}
 	],
 	"triggers": [
