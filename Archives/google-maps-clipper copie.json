@@ -40,8 +40,18 @@
 			"type": "text"
 		},
 		{
+			"name": "description",
+			"value": "{{selector:.PYvSYb}}",
+			"type": "text"
+		},
+		{
 			"name": "rating",
 			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "base",
+			"value": "[[Places.base]]",
 			"type": "text"
 		},
 		{

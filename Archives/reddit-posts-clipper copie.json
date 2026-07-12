@@ -31,13 +31,18 @@
 		},
 		{
 			"name": "subreddit",
-			"value": "[[{{selector:shreddit-post?subreddit-prefixed-name}}]]",
+			"value": "{{selector:shreddit-post?subreddit-prefixed-name}}",
 			"type": "text"
 		},
 		{
 			"name": "topics",
 			"value": "",
 			"type": "multitext"
+		},
+		{
+			"name": "base",
+			"value": "[[Clippings.base]]",
+			"type": "text"
 		},
 		{
 			"name": "image",

@@ -1,8 +1,8 @@
 {
 	"schemaVersion": "0.1.0",
-	"name": "YouTube Videos",
+	"name": "YouTube Videos (Summary)",
 	"behavior": "create",
-	"noteContentFormat": "\n![]({{url}})\n\n{{transcript|replace:\"#\":\"\"|replace:\"**\":\"\n**\"|callout:\"quote\",\"Transcript\",true}}\n\n---\n## Notes\n\n",
+	"noteContentFormat": "\n{{\"rédige un résumé de 350 caractères maximum expliquant de quoi parle la vidéo et les principaux enseignements abordés, en français simple.\"|callout:\"summary\",\"Résumé\",false}}\n\n![]({{schema:@VideoObject:embedUrl|replace:\"embed/\":\"watch?v=\"}})\n\n{{transcript|replace:\"#\":\"\"|replace:\"**\":\"\n**\"|callout:\"quote\",\"Transcript\",true}}\n\n---\n## Notes\n\n",
 	"properties": [
 		{
 			"name": "tags",
@@ -40,13 +40,18 @@
 			"type": "multitext"
 		},
 		{
+			"name": "base",
+			"value": "[[Clippings.base]]",
+			"type": "text"
+		},
+		{
 			"name": "image",
 			"value": "{{schema:thumbnailUrl|slice:0}}",
 			"type": "text"
 		},
 		{
 			"name": "url",
-			"value": "{{url}}",
+			"value": "{{schema:@VideoObject:embedUrl|replace:\\\"embed/\\\":\\\"watch?v=\\\"}}",
 			"type": "text"
 		},
 		{

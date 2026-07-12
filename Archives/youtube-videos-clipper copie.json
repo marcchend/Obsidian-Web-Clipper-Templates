@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "YouTube Videos",
 	"behavior": "create",
-	"noteContentFormat": "\n![]({{url}})\n\n{{transcript|replace:\"#\":\"\"|replace:\"**\":\"\n**\"|callout:\"quote\",\"Transcript\",true}}\n\n---\n## Notes\n\n",
+	"noteContentFormat": "\n![]({{schema:@VideoObject:embedUrl|replace:\"embed/\":\"watch?v=\"}})\n\n{{transcript|replace:\"#\":\"\"|replace:\"**\":\"\n**\"|callout:\"quote\",\"Transcript\",true}}\n\n---\n## Notes\n\n",
 	"properties": [
 		{
 			"name": "tags",
@@ -40,13 +40,18 @@
 			"type": "multitext"
 		},
 		{
+			"name": "base",
+			"value": "[[Clippings.base]]",
+			"type": "text"
+		},
+		{
 			"name": "image",
 			"value": "{{schema:thumbnailUrl|slice:0}}",
 			"type": "text"
 		},
 		{
 			"name": "url",
-			"value": "{{url}}",
+			"value": "{{schema:@VideoObject:embedUrl|replace:\\\"embed/\\\":\\\"watch?v=\\\"}}",
 			"type": "text"
 		},
 		{

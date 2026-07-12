@@ -20,6 +20,11 @@
 			"type": "multitext"
 		},
 		{
+			"name": "base",
+			"value": "[[Clippings.base]]",
+			"type": "text"
+		},
+		{
 			"name": "image",
 			"value": "{{image}}",
 			"type": "text"

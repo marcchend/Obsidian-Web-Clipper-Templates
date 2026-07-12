@@ -1,6 +1,6 @@
 {
 	"schemaVersion": "0.1.0",
-	"name": "Recipes",
+	"name": "GitHub Repositories",
 	"behavior": "create",
 	"noteContentFormat": "## Notes\n\n",
 	"properties": [
@@ -11,52 +11,32 @@
 		},
 		{
 			"name": "categories",
-			"value": "[[Recipes]]",
+			"value": "[[Clippings]]",
 			"type": "multitext"
 		},
 		{
 			"name": "title",
-			"value": "{{title}}",
+			"value": "{{selector:#repo-title-component a}}",
 			"type": "text"
 		},
 		{
 			"name": "author",
-			"value": "[[{{author}}]]",
+			"value": "[[{{meta:name:octolytics-dimension-user_login}}]]",
 			"type": "multitext"
 		},
 		{
 			"name": "published",
-			"value": "{{published}}",
+			"value": "{{selector:[data-testid=\\\\\"latest-commit-details\\\\\"] relative-time}}",
 			"type": "date"
 		},
 		{
-			"name": "prepTime",
-			"value": "{{schema:prepTime|duration}}",
-			"type": "text"
-		},
-		{
-			"name": "restTime",
-			"value": "{{schema:restTime|duration}}",
-			"type": "text"
-		},
-		{
-			"name": "cookTime",
-			"value": "{{schema:cookTime|duration}}",
-			"type": "text"
-		},
-		{
-			"name": "totalTime",
-			"value": "{{schema:totalTime|duration}}",
-			"type": "text"
-		},
-		{
-			"name": "cuisine",
+			"name": "topics",
 			"value": "",
 			"type": "multitext"
 		},
 		{
-			"name": "rating",
-			"value": "",
+			"name": "base",
+			"value": "[[Clippings.base]]",
 			"type": "text"
 		},
 		{
@@ -71,9 +51,7 @@
 		}
 	],
 	"triggers": [
-		"schema:@Recipe",
-		"https://www.joshuaweissman.com/recipes",
-		"https://www.marmiton.org"
+		"/^https:\\/\\/github\\.com\\/[^\\/]+\\/[^\\/]+\\/?$/"
 	],
 	"noteNameFormat": "{{time|date:YYYY-MM-DD-HHmmss}} {{title}}",
 	"path": "Clippings"
