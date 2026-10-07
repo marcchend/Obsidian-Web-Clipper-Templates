@@ -43,6 +43,16 @@ Tous les templates partagent les mêmes propriétés de base :
 
 Les clippings sont nommés `YYYY-MM-DD-HHmmss <titre>` pour rester triés chronologiquement. Les fiches de référence (Goodreads, Google Maps) portent simplement le nom de l'objet.
 
+## Scraping
+
+La plupart des templates font du scraping : ils extraient les informations directement du HTML de la page, de trois façons.
+
+- **Sélecteurs CSS** (`{{selector:...}}`, `{{selectorHtml:...}}`) : GitHub, Goodreads, Google Maps, Reddit, Wikipedia
+- **Données structurées schema.org** (`{{schema:...}}`) : Recipes, YouTube, et le nombre de pages sur Goodreads
+- **Balises meta** (`{{meta:...}}`) : le propriétaire du repo sur GitHub
+
+Les sélecteurs CSS dépendent de la structure des pages et des noms de classes choisis par chaque site (par exemple `.BookPageTitleSection__title` sur Goodreads ou `h1.DUwDvf` sur Google Maps). Quand un site change son interface, certains champs peuvent revenir vides et le template doit être mis à jour. Les données schema.org sont en général plus stables.
+
 ## Installation
 
 1. Installer l'extension [Obsidian Web Clipper](https://obsidian.md/clipper).
